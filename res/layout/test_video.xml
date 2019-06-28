@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".VideoTestActivity" >
+
+        <com.rockchip.devicetest.view.VideoView
+            android:id="@+id/test_vv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/success"
+            style="@android:attr/buttonBarStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/pub_success" >
+        </Button>
+
+        <Button
+            android:id="@+id/fail"
+            style="@android:attr/buttonBarStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_fail" >
+        </Button>
+
+        <Button
+            android:id="@+id/scale"
+            style="@android:attr/buttonBarStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/scale" >
+        </Button>
+    </LinearLayout>
+
+</FrameLayout>

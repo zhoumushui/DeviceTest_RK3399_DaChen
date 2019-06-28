@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/float_agingtest_layout"
+    android:layout_width="400dip"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <LinearLayout
+        android:layout_width="400dip"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            layout="@layout/test_float_aging_cpu" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            layout="@layout/test_aging_memory" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            layout="@layout/test_float_aging_vpu" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/exit"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/exit" >
+    </Button>
+
+</RelativeLayout>

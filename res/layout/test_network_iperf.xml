@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1000dip"
+    android:layout_height="700dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="1200dip"
+        android:layout_height="550dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_list_item_bg"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/iperf_title"
+                android:textSize="25sp" >
+            </TextView>
+
+            <ScrollView
+                android:id="@+id/iperfScroller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/iperfTestInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:keepScreenOn="true"
+                    android:textSize="20sp" >
+                </TextView>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/iperfBtnStart"
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/start" >
+        </Button>
+
+        <Button
+            android:id="@+id/iperfBtnSuccess"
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/pub_success" >
+        </Button>
+
+        <Button
+            android:id="@+id/iperfBtnFail"
+            style="@android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/pub_fail" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

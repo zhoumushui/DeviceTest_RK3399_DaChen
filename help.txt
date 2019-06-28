@@ -1,0 +1,15 @@
+工程推向服务器步骤：
+
+1.登录服务器：zhaol@168.168.0.12
+
+2.新建目录： mkdir test，将工程拷贝到该目录下
+
+3.初始化git: git init
+
+4.添加文件： git add .
+
+4.提交：     git commit -m "添加推向服务器步骤说明文档"
+
+5.推向服务器：
+git push git@168.168.0.253:appDev/DeviceTest.git master:master
+

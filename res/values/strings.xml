@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">DeviceTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- Command -->
+    <string name="cmd_wifi">WIFI</string>
+    <string name="cmd_lan">LAN</string>
+    <string name="cmd_sd">SD</string>
+    <string name="cmd_hdmi">4k视频测试</string>
+    <string name="cmd_cvbs">CVBS</string>
+    <string name="cmd_vga">VGA</string>
+    <string name="cmd_iperf">Iperf</string>
+    <string name="cmd_chnl">左右声道</string>
+    <string name="cmd_led">LED显示屏</string>
+    <string name="cmd_key">按键</string>
+    <string name="cmd_rest">RESET</string>
+    <string name="cmd_usb">USB</string>
+    <string name="cmd_cksn">验号</string>
+    <string name="cmd_mic">麦克风</string>
+    <string name="cmd_bluetooth">蓝牙</string>
+    <string name="cmd_hdmi_in">HDMI_IN</string>
+    <string name="cmd_pppoe">PPPoE</string>
+    <string name="cmd_spdif">SPDIF</string>
+    <string name="cmd_usb_label">USB_</string>
+    <string name="cmd_memory">内存和Flash</string>
+    <string name="cmd_record">录音</string>
+    <string name="cmd_camera">照相</string>
+    <string name="cmd_smb">SMB</string>
+    <string name="cmd_wifi_smb">WIFISMB</string>
+    <string name="cmd_line_in">LINE IN</string>
+    <string name="cmd_serial_port">Serial Port</string>
+    <string name="cmd_hdmi_edid">HDMI EDID</string>
+    <string name="cmd_time">TIME</string>
+     <string name="cmd_device_chk">DEVICE CHK</string>
+     <string name="cmd_pcie">PCIE</string>
+     <string name="cmd_simcard">SIM CARD</string>
+     <string name="cmd_fan">FAN</string>
+     <string name="cmd_typec">TYPEC</string>
+      <string name="cmd_wifi_5g">WIFI 5G</string>
+
+    <!-- Main -->
+    <string name="main_title">设备测试工具</string>
+    <string name="main_version_info">固件信息:</string>
+    <string name="main_version_model">型号</string>
+    <string name="main_version_android">版本</string>
+    <string name="main_version_kernel">Kernel版本</string>
+    <string name="main_version_ram">内存</string>
+    <string name="main_version_flash">Flash</string>
+    <string name="main_test_info">测试信息:</string>
+    <string name="main_list_head_title">测试项目</string>
+    <string name="main_list_head_status">测试状态</string>
+    <string name="main_list_head_result">测试结果</string>
+    <string name="main_list_head_send">发送结果</string>
+    <string name="main_list_head_detail">描述</string>
+
+    <!-- Test -->
+    <string name="test_status_wait">等待测试</string>
+    <string name="test_status_doing">正在测试</string>
+    <string name="test_status_finish">测试完成</string>
+
+    <!-- Public -->
+    <string name="pub_prompt">提示</string>
+    <string name="pub_pass">PASS</string>
+    <string name="pub_pass_msg">测试已经通过，是否需要恢复出厂设置设置!</string>
+    <string name="pub_fail_msg">已测试所有测试项，尚有失败项，是否继续测试！</string>
+    <string name="pub_success">成功</string>
+    <string name="pub_fail">失败</string>
+    <string name="pub_exception">未知异常</string>
+    <string name="pub_time_out">测试超时</string>
+    <string name="pub_sure">是</string>
+    <string name="pub_cancel">否</string>
+    <string name="pub_unsend">未发送</string>
+    <string name="pub_retest">按[&#160;&#160;<xliff:g id="key">%s</xliff:g>&#160;&#160;]重测</string>
+    <string name="pub_save_failed">保存失败</string>
+    <string name="exit">退出程序</string>
+    <string name="pub_test_no_exist">本机不支持此项功能测试</string>
+    <string name="pub_erase_sd_check">是否格式化SD卡?</string>
+    <string name="pub_reset_device">恢复出厂设置</string>
+	<string name="pub_reset_device_msg">是否恢复出厂设置？</string>	
+    <!-- Wifi -->
+    <string name="wifi_connecting_ap">正在连接至<xliff:g>%s</xliff:g>...</string>
+    <string name="wifi_err_scan_fail">扫描失败</string>
+    <string name="wifi_err_ap_not_specified">未指定AP</string>
+    <string name="wifi_err_attach_params">附加参数错误,请配置Factory_Test</string>
+    <string name="wifi_err_cmd_params">命令参数错误</string>
+    <string name="wifi_err_signal_outrange">%s:信号强度不在范围, dBm: <xliff:g>%s</xliff:g></string>
+     <string name="wifi_err_scan_outrange">%s:无法扫描到信号</string>
+    <string name="wifi_err_pwd_unspecified">密码未指定</string>
+    <string name="wifi_err_pwd_unsupport">不支持EAP加密方式</string>
+    <string name="wifi_err_connect">Wifi:<xliff:g>%s</xliff:g>,密码:<xliff:g>%s</xliff:g>, 连接失败</string>
+
+    <!-- sdcard -->
+    <string name="sd_err_unmount">未检测到SD卡设备</string>
+    <string name="sd_err_mkdir">测试目录创建失败</string>
+    <string name="sd_err_mkfile">测试文件创建失败</string>
+    <string name="sd_err_write">写入测试数据失败</string>
+    <string name="sd_err_read">读取测试数据失败</string>
+    <string name="sd_err_match">读取写入不匹配</string>
+
+    <!-- lan -->
+    <string name="lan_err_enable">以太网开启失败</string>
+    <string name="lan_err_disconnect">以太网未连接</string>
+    <string name="lan_err_ip">无法获取到IP地址</string>
+    <string name="lan_ip_address">IP:<xliff:g id="cnt">%s</xliff:g></string>
+    <string name="lan_err_attach_params">附加参数错误,请配置Factory_Test</string>
+    <string name="ethernet_speed">带宽：</string>
+    <string name="ethernet_speed_no_1000">不是千兆网</string>
+
+    <!-- Iperf -->
+    <string name="iperf">iperf测试</string>
+     <string name="iperf_title">吞吐量测试</string>
+     <string name="iperf_title_wifi">WIFI 吞吐量测试</string>
+       <string name="iperf_title_wifi_5g">5G WIFI 吞吐量测试</string>
+     <string name="iperf_title_lan">LAN 吞吐量测试</string>
+    <string name="iperf_msg">通过下拉菜单选择测试方式</string>
+    <string name="start">开始</string>
+    <string name="abort">终止</string>
+    <string name="wifi_cmd_tcp">WIFI吞吐量测试(TCP)</string>
+    <string name="wifi_cmd_udp">WIFI吞吐量测试(UDP)</string>
+    <string name="wifi_cmd_udp_b">WIFI吞吐量测试(UDP、指定带宽)</string>
+    <string name="lan_cmd_tcp">LAN吞吐量测试(TCP)</string>
+    <string name="lan_cmd_udp">LAN吞吐量测试(UDP)</string>
+    <string name="lan_cmd_udp_b">LAN吞吐量测试(UDP、指定带宽)</string>
+    <string name="ToggleButton">Toggle Button</string>
+    <!-- memory -->
+    <string name="memory_err_attach_params">未配置ram和flash的大小，请配置Factory_Test</string>
+    <!-- hdmi -->
+    <string name="hdmi_title">4k视频测试</string>
+    <string name="hdmi_msg">请确认屏幕显示是否正常</string>
+    <string name="screen_test">全屏测试</string>
+    <string name="screen_full">全屏</string>
+    <string name="scale">缩放</string>
+
+    <!-- hdmi_in -->
+    <string name="hdmi_in_title">HDMI_IN测试</string>
+    <string name="hdmi_in_msg">请确认是否切换成HDMI_IN，相应输出屏幕显示是否正常</string>
+    
+    <!--hdmi edid -->
+    <string name="hdmi_edid_title">HDMI EDID</string>
+
+    <!-- cvbs -->
+    <string name="cvbs_title">CVBS测试</string>
+    <string name="cvbs_msg">请确认是否已通过CVBS正确输出显示</string>
+
+    <!-- reset -->
+    <string name="reset_title">Reset按键测试</string>
+    <string name="reset_msg">请手动按下测试设备的Reset按键</string>
+
+    <!-- key -->
+    <string name="key_title">按键测试</string>
+    <string name="textPowerLedHint">测试POWER时观察指示灯变化:\n待机红灯，唤醒蓝灯</string>
+    <string name="key_recovery">Recovery</string>
+    <string name="key_power">Power</string>
+    <string name="key_volume_up">Vol+</string>
+    <string name="key_volume_down">Vol-</string>
+    <string name="key_back">Back</string>
+    <string name="key_menu">Menu</string>
+    <string name="key_home">Home</string>
+    <string name="key_up">Up</string>
+    <string name="key_down">Down</string>
+    <string name="key_left">Left</string>
+    <string name="key_right">Right</string>
+    <string name="key_enter">Enter</string>
+
+     <!-- smb -->
+    <string name="smb_title">SMB测试</string>
+    <string name="smb_wifi_title">WifiSMB测试</string>
+     <string name="smb_msg">SMB测试是否成功。。。？</string>
+    <string name="smb_test_hint">网络连接中,请稍候。。。</string>
+
+     <!-- serial port -->
+    <string name="serial_port_title">Serial Port测试</string>
+    <string name="serial_port_error1">测试串口路径为空</string>
+    
+    <!-- audio channel -->
+    <string name="audio_title">左右声道测试</string>
+
+    <!-- spdif -->
+    <string name="spdif_title">Spdif测试</string>
+
+    <!-- LED -->
+    <string name="led_title">LED和遥控器测试</string>
+    <string name="led_test_msg">请连续按下MENU键数次,并确认LED灯是否间断亮灭?</string>
+    <string name="led_screen_title">LED显示屏测试</string>
+    <string name="led_screen_msg">请确认LED显示屏点阵全部点亮？</string>
+    
+    <!-- SATA -->
+    <string name="sata_title">SATA测试</string>
+    <string name="sata_msg">请连接电脑读取硬盘</string>
+    
+    <!-- DP -->
+    <string name="dp">DP测试</string>
+    <string name="dp_title">DP测试</string>
+    <string name="dp_msg">请连接DP电视</string>
+
+    <!-- usb -->
+    <string name="usb_err_unmount">未检测到USB设备</string>
+    <string name="usb_err_noexist">未找到Usb设备目录</string>
+    <string name="usb_count_err">未插入足够的USB设备</string>
+    <string name="usb_message">请确认是否插入鼠标操作，并确认鼠标是否可用</string>
+    <string name="usb_to_otg_success">OTG:挂载鼠标成功</string>
+
+    <!-- Microphone -->
+    <string name="mic_title">麦克风测试</string>
+    <string name="mic_msg">请对着麦克风说话</string>
+
+    <!-- update -->
+    <string name="current_version">当前版本:\n</string>
+    <string name="find_new_version">\n发现新版本:\n</string>
+    <string name="code"> VersionCode:</string>
+    <string name="yes_no_update">\n是否更新?</string>
+    <string name="soft_update">厂测工具软件更新</string>
+    <string name="update">更新</string>
+    <string name="not_update">暂不更新</string>
+    <!-- 老化测试 -->
+    <string name="aging_test_title">老化测试</string>
+    <string name="cpu_title">CPU:</string>
+    <string name="cpu_model">CPU型号:</string>
+    <string name="cpu_core_num">CPU核数:</string>
+    <string name="cpu_freq">频率范围:</string>
+    <string name="cpu_curr_freq">当前频率:</string>
+    <string name="cpu_usage">CPU负载:</string>
+    <string name="cpu_temperature">CPU温度:</string>
+    <string name="mem_title">Memory:</string>
+    <string name="mem_err_bin">启动测试程序出错</string>
+    <string name="mem_test_count">[<xliff:g id="cnt">%s</xliff:g>]</string>
+    <string name="gpu_title">GPU:</string>
+    <string name="vpu_title">VPU:</string>
+    <string name="vpu_err_video">测试视频不存在</string>
+    <string name="vpu_err_play">视频无法播放</string>
+    <string name="vpu_err_attach_params">附加参数错误,请配置Factory_Test</string>
+    <string name="aging_test_check">老化测试前, 请先进行功能测试.</string>
+    <string name="aging_test_back">再按<xliff:g>%s</xliff:g>次退出.</string>
+    <string name="link">物理连接</string>
+    <string name="user">用户名</string>
+    <string name="password">密码</string>
+    <string name="wifi">wifi</string>
+    <string name="ethernet">Ethernet</string>
+    <string name="copy_file_progress">正在复制视频文件......</string>
+    <string name="no_file">U盘中没有找到Aging_Test_Video.mp4文件</string>
+    <string name="system_run_time_title">运行时间:</string>
+    <string name="app_run_number_times_title">老化测试次数:</string>
+    <string name="system_abnormal_restart_time_title">异常重启次数:</string>
+    <string name="unsafe_dialog_title">异常关机</string>
+    <string name="unsafe_dialog_msg">最后一次关机为非正常关机，是否继续进行老化测试？</string>
+
+    <!-- VGA -->
+    <string name="vga_title">VGA测试 请拔掉HDMI线，插入VGA线，选择VGA输出分辨率，观察屏幕输出是否正常？</string>
+    <string name="vga_msg">请拔掉HDMI线，插入VGA线，选择VGA输出分辨率，观察屏幕输出是否正常？</string>
+    <string name="vga_resolution">VGA输出分辨率：</string>
+    <string name="lan_iperf_test">LAN</string>
+    <string name="wifi_iperf_test">WIFI</string>
+
+    <!-- RECORD -->
+    <string name="record">录音测试</string>
+    <string name="record_record">录音</string>
+    <string name="record_play">播放</string>
+
+    <!-- CAMERA -->
+    <string name="camera_title">照相测试</string>
+    <string name="camera_msg">照相、录像功能是否正常?拍照后照片显示、录像播放是否正常？</string>
+    <string name="camera_shutter">拍照</string>
+    <string name="camera_switch">切换摄像头</string>
+    <string name="camera_exit">退出</string>
+    <string name="camera_go_gallery">跳转到图库</string>
+    
+     <!-- LINE IN -->
+    <string name="line_in_title">LINE IN</string>
+    <string name="line_in_msg">请插入LINE IN 设备，看是否有声音输出？</string>
+  
+    <!--TIME 时间测试 -->
+    <string name="time_test_title">RTC时间测试</string>
+    <!--  device chk  -->
+    <string name="device_chk_title">DEVICE_CHK</string>
+    
+     <!--  PCIE  -->
+    <string name="pcie_title">PCIE</string>
+     <string name="pcie_err_unmount">未检测到PCIE设备</string>
+     <string name="pcie_err_mkdir">测试目录创建失败</string>
+    <string name="pcie_err_mkfile">测试文件创建失败</string>
+    <string name="pcie_err_write">写入测试数据失败</string>
+    <string name="pcie_err_read">读取测试数据失败</string>
+    <string name="pcie_err_match">读取写入不匹配</string>
+    <string name="pcie_test_result">设置写速度为<xliff:g>%s</xliff:g>MB/s,实际写速度为<xliff:g>%s</xliff:g>MB/s \n 设置读速度为<xliff:g>%s</xliff:g>MB/s,实际读速度为<xliff:g>%s</xliff:g>MB/s </string>
+    
+     <!--SIM CARD 测试 -->
+    <string name="simcard_test_title">SIM CARD测试</string>
+    <string name="simcard_err_null_imsi">无法获取IMSI</string>
+    <string name="simcard_err_null_signalstrength">IMSI:<xliff:g>%s</xliff:g>,运营商:<xliff:g>%s</xliff:g> \n 无法获取信号强度</string>
+     <string name="simcard_err_insufficient_signalstrength">IMSI:<xliff:g>%s</xliff:g>,运营商:<xliff:g>%s</xliff:g> \n  <xliff:g>%s</xliff:g> LEVEL:<xliff:g>%s</xliff:g>低于标准<xliff:g>%d</xliff:g></string>
+    <string name="simcard_test_result">IMSI:<xliff:g>%s</xliff:g>,运营商:<xliff:g>%s</xliff:g> \n  <xliff:g>%s</xliff:g> LEVEL:<xliff:g>%s</xliff:g> </string>
+   
+         <!--FAN AD 风扇测试 -->
+    <string name="fan_test_title">风扇测试</string>
+    <string name="fan_success_run">风扇运行中 AD:<xliff:g>%d</xliff:g></string>
+    <string name="fan_success_stop">风扇已停止 AD:<xliff:g>%d</xliff:g></string>
+    <string name="fan_error">风扇状态异常 AD:<xliff:g>%d</xliff:g></string>
+    
+    <string name="fan2_title">风扇测试</string>
+    <string name="fan2_msg">请确认风扇是否转动？</string>
+    
+    <!--TypeC 测试 -->
+    <string name="typec_test_title">TYPEC测试</string>
+    <string name="typec_dp_1">DisplayPort正面插入</string>
+    <string name="typec_dp_2">DisplayPort反面插入</string>
+    <string name="typec_usb_1">USB正面插入</string>
+    <string name="typec_usb_2">USB反面插入</string>
+     <string name="typec_btn_check">检测挂载</string>
+    <string name="typec_btn_success">成功</string>
+    <string name="typec_btn_fail">失败</string>
+    
+    <!-- network 网络连接超时 -->
+     <string name="network_test_connect_timeout">网络连接超时!</string>
+
+    
+     <string name="cmd_wifi_5g_title">WIFI 5G测试</string>
+     
+     <string name="ping_title">Ping测试</string>
+    
+</resources>

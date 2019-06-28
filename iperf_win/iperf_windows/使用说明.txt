@@ -1,0 +1,60 @@
+厂测工具针对开发板的测试：
+  
+  1.修改配置文件：Factory_Test.ini。
+    与N6不同的是，增加了VGA和IPERF的测试，去掉了HDMI_IN和CVBS的测试
+
+    [HDMI_IN]
+    activated = 0
+    [CVBS]
+    activated = 0
+    [VGA]
+    activated = 1
+    [IPERF]
+    activated = 1
+    server_ip = host    ;host 替换为服务器的ip地址
+    server_port = 8000  ;server_port为端口号
+
+  2.使用EncryptTool.exe工具，生成Factory_Test_Signed.bin文件，重命名为Factory_Test.bin,拷贝文件至优盘根目录。
+  3.iperf测试需要准备的工作：
+(1).将iperf-2.0.5-2-win32文件夹复制到C盘根目录
+(2).iperf_s_tcp.bat,iperf_s_udp.bat,iperf_s_udp.bat,iperf_s_udp_i1.bat三个文件为服务端批处理文件
+	iperf_s_tcp      tcp测试
+	iperf_s_udp      udp测试
+	iperf_s_udp_i1   udp(指定输出间隔为1s)测试
+	批处理文件编写:
+     iperf_s_tcp.bat文件如下：
+       cd C:\iperf-2.0.5-2-win32       
+       iperf -s -p 8000
+     iperf_s_udp.bat文件如下：
+       cd C:\iperf-2.0.5-2-win32       
+       iperf -s -u -p 8000
+     iperf_s_udp_i1.bat文件如下：
+       cd C:\iperf-2.0.5-2-win32       
+       iperf -s -u -i 1 -p 8000
+     文本编辑器编辑后另存为.bat后缀的文件，其中端口号根据需要进行改写
+    (3). 双击批处理文件，开启服务端
+  
+iperf 常用命令：
+服务端：
+	iperf -s -p 8000         默认为tcp方式
+	iperf -s -u	-p 8000	     udp方式
+	iperf -s -u i 1 -p 8000  udp方式(间隔1s输出测试结果)
+客户端:
+	iperf -c host -i 1 -w 1M -p 8000              
+	iperf -c host -i 1 -u -w 1M -p 8000         
+	iperf -c host -i 1 -u -w 1M -b 900M -t 10 -p 8000  
+			
+-s    指定服务端
+-c    指定客户端							 	
+host  替换为服务器IP地址
+-i    指定每次报告之间的时间间隔，单位为秒
+-w    设置套接字缓冲区为指定大小。
+	  对于TCP方式，此设置为TCP窗口大小。
+	  对于UDP方式，此设置为接受UDP数据包的缓冲区大小，限制可以接受数据包的最大值。
+-u    使用udp方式
+-b    udp方式使用的带宽，单位bits/sec。此选项与-u选项相关。默认值是1 Mbit/sec。
+-t    设置测试次数，默认值为10次，总时间 = i * t
+-p    设定端口号
+
+
+

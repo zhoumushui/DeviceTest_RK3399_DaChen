@@ -1,0 +1,39 @@
+﻿
+DeviceTest.apk实现功能：
+
+   功能测试(wifi、lan、usb、sd、led、chnl、hdmi、cvbs、rest)；
+   老化测试(配置文件在Asserts文件夹中，agingconfig.ini)
+   写号测试
+
+ 
+添加功能测试项的方法：
+
+1. 在com.rockchip.devicetest.testcase.impl包中新建功能项测试类，继承BaseTestCase。
+
+2. 在com.rockchip.devicetest.constants包中添加常量，要测试功能的名称：
+   
+   //示例
+   public static final CMD_WIFI = "WIFI";
+   public static final String CMD_USB = "USB ";// USB
+
+3. 在com.rockchip.devicetest.enumerate.Commands中添加枚举值
+  
+   //示例
+   CMD_WIFI(TYPEConstants.CMD_WIFI,R.string.cmd_wifi)
+
+4. 在asserts文件夹中testconfig.properties属性文件里添加键值对
+
+   //示例
+   USB = com.rockchip.devicetest.testcase.impl.UsbTest
+注意这里的"USB"要与com.rockchip.devicetest.constants中的CMD_USB赋值相同，一一对应！！！
+
+5. 在配置文件Factory_Test.ini中，加入要测试的功能项
+   
+   //示例
+   [USB]activated = 1 
+	其中1表示测试该项，0表示不测试该项
+注意这里的"USB"要与com.rockchip.devicetest.constants中的CMD_USB赋值相同，一一对应！！！
+
+程序运行步骤：
+
+配置工具文件夹-->ini配置文件-->通过EncryptTool工具转换成bin文件，修改文件名为Factory_Test.bin-->将该文件拷贝到U盘或sd卡根目录-->运行程序

@@ -1,0 +1,225 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgingTestActivity" >
+
+    <TextView
+        android:id="@+id/tv_cpu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:text="@string/cpu_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <!-- CPU型号 -->
+
+    <TextView
+        android:id="@+id/tv_cpu_model_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cpu_title"
+        android:contentDescription="@null"
+        android:text="@string/cpu_model"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <TextView
+        android:id="@+id/tv_cpu_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_cpu_model_title"
+        android:layout_toRightOf="@id/tv_cpu_model_title"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <!-- 核心数 -->
+
+    <TextView
+        android:id="@+id/tv_cpu_corenum_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_cpu_model_title"
+        android:layout_below="@id/tv_cpu_model_title"
+        android:contentDescription="@null"
+        android:text="@string/cpu_core_num"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <TextView
+        android:id="@+id/tv_cpu_corenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_cpu_corenum_title"
+        android:layout_toRightOf="@id/tv_cpu_corenum_title"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <!-- 频率范围 -->
+
+    <TextView
+        android:id="@+id/tv_cpu_freq_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_cpu_corenum_title"
+        android:layout_below="@id/tv_cpu_corenum_title"
+        android:contentDescription="@null"
+        android:text="@string/cpu_freq"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_cpu_freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_cpu_freq_title"
+        android:layout_toRightOf="@id/tv_cpu_freq_title"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size"
+        android:visibility="gone" />
+
+    <!-- 当前频率 -->
+
+    <TextView
+        android:id="@+id/tv_cpu_currfreq_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_cpu_freq_title"
+        android:layout_below="@id/tv_cpu_freq_title"
+        android:contentDescription="@null"
+        android:text="@string/cpu_curr_freq"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <TextView
+        android:id="@+id/tv_cpu_currfreq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_cpu_currfreq_title"
+        android:layout_toRightOf="@id/tv_cpu_currfreq_title"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <!-- CPU负载 -->
+
+    <TextView
+        android:id="@+id/tv_cpu_usage_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_cpu_currfreq_title"
+        android:layout_below="@id/tv_cpu_currfreq_title"
+        android:contentDescription="@null"
+        android:text="@string/cpu_usage"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <TextView
+        android:id="@+id/tv_cpu_usage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_cpu_usage_title"
+        android:layout_toRightOf="@id/tv_cpu_usage_title"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <!-- CPU温度 -->
+
+    <TextView
+        android:id="@+id/tv_cpu_temperature_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_cpu_usage_title"
+        android:layout_below="@id/tv_cpu_usage_title"
+        android:contentDescription="@null"
+        android:text="@string/cpu_temperature"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_cpu_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_cpu_temperature_title"
+        android:layout_toRightOf="@id/tv_cpu_temperature_title"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <!-- 运行时间 -->
+
+    <TextView
+        android:id="@+id/system_run_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_cpu_usage_title"
+        android:layout_below="@id/tv_cpu_temperature_title"
+        android:contentDescription="@null"
+        android:text="@string/system_run_time_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <TextView
+        android:id="@+id/system_run_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/system_run_time_title"
+        android:layout_toRightOf="@id/system_run_time_title"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <!-- 异常重启次数 -->
+
+    <TextView
+        android:id="@+id/system_abnormal_restart_times_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_cpu_usage_title"
+        android:layout_below="@id/system_run_time_title"
+        android:contentDescription="@null"
+        android:text="@string/system_abnormal_restart_time_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <TextView
+        android:id="@+id/system_abnormal_restart_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/system_abnormal_restart_times_title"
+        android:layout_toRightOf="@id/system_abnormal_restart_times_title"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+      <!-- 老化测试次数 -->
+
+    <TextView
+        android:id="@+id/aging_test_times_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_cpu_usage_title"
+        android:layout_below="@id/system_abnormal_restart_times_title"
+        android:contentDescription="@null"
+        android:text="@string/app_run_number_times_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+
+    <TextView
+        android:id="@+id/aging_test_times_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/aging_test_times_title_view"
+        android:layout_toRightOf="@id/aging_test_times_title_view"
+        android:contentDescription="@null"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size" />
+    
+</RelativeLayout>

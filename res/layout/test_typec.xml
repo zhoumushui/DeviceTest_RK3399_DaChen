@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:typec="http://schemas.android.com/apk/res/com.rockchip.devicetest"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:minHeight="200dip"
+    android:orientation="vertical"
+    android:padding="20dip" >
+    <com.rockchip.devicetest.view.LayoutTypecCheck
+        android:id="@+id/typec_usb_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        typec:button1_title="@string/typec_btn_check"
+        typec:title="@string/typec_usb_1" />
+
+    <com.rockchip.devicetest.view.LayoutTypecCheck
+        android:id="@+id/typec_usb_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        typec:button1_title="@string/typec_btn_check"
+        typec:title="@string/typec_usb_2" />
+    
+    <com.rockchip.devicetest.view.LayoutTypecCheck
+        android:id="@+id/typec_dp_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        typec:button1_title="@string/typec_btn_success"
+        typec:button2_title="@string/typec_btn_fail"
+        typec:title="@string/typec_dp_1" />
+
+    <com.rockchip.devicetest.view.LayoutTypecCheck
+        android:id="@+id/typec_dp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        typec:button1_title="@string/typec_btn_success"
+        typec:button2_title="@string/typec_btn_fail"
+        typec:title="@string/typec_dp_2" />
+
+
+
+</LinearLayout>

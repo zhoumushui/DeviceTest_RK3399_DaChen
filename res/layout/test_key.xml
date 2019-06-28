@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:minHeight="200dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/textPowerLedHint"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_recovery"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_recovery" />
+
+        <Button
+            android:id="@+id/btn_power"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_power" />
+        <!--
+        <Button
+            android:id="@+id/btn_volumeup"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_volume_up" />
+
+        <Button
+            android:id="@+id/btn_volumedown"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_volume_down" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_back" />
+
+        <Button
+            android:id="@+id/btn_menu"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_menu" />
+
+        <Button
+            android:id="@+id/btn_home"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_home" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_dpadup"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_up" />
+
+        <Button
+            android:id="@+id/btn_dpaddown"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_down" />
+
+        <Button
+            android:id="@+id/btn_dpadleft"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_left" />
+
+        <Button
+            android:id="@+id/btn_dpadright"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_right" />
+
+        <Button
+            android:id="@+id/btn_dpadcenter"
+            style="@style/TestKeyButtonStyle"
+            android:text="@string/key_enter" />
+
+
+        -->
+    </LinearLayout>
+
+</LinearLayout>
