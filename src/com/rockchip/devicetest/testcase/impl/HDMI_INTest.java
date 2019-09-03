@@ -98,12 +98,12 @@ public class HDMI_INTest extends BaseTestCase {
 	public boolean onTesting() {
 		// TODO Auto-generated method stub
 		LOGD("onTesting");
-		File style1 = new File(HDMI_IN_FILE_STYLE);
-		File style2 = new File(HDMI_IN_FILE_STYLE2);
-		if (!((style1.exists() && style1.isFile()) || (style2.exists() && style2.isFile()))) {
-			onTestFail(R.string.pub_test_no_exist);
-			return super.onTesting();
-		}
+		//File style1 = new File(HDMI_IN_FILE_STYLE);
+		//File style2 = new File(HDMI_IN_FILE_STYLE2);
+		//if (!((style1.exists() && style1.isFile()) || (style2.exists() && style2.isFile()))) {
+		//	onTestFail(R.string.pub_test_no_exist);
+		//	return super.onTesting();
+		//}
 		// 关闭cvbs
 		File cvbsFile = CVBSTest.getCvbsDisplay();
 		CVBSTest.setEnabled(cvbsFile, false);
