@@ -1,6 +1,7 @@
 package com.rockchip.devicetest.testcase.impl;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ import com.rockchip.devicetest.R;
 import com.rockchip.devicetest.constants.ParamConstants;
 import com.rockchip.devicetest.model.TestCaseInfo;
 import com.rockchip.devicetest.testcase.BaseTestCase;
+import com.rockchip.devicetest.utils.SettingUtil;
 import com.rockchip.devicetest.utils.StringUtils;
 
 public class RecordTest extends BaseTestCase {
@@ -92,6 +94,7 @@ public class RecordTest extends BaseTestCase {
 			if(v == btnRecord) {
 				stopPlay();
 				startRecord();		
+				SettingUtil.SaveFileToNode(new File("/proc/in_sel"), "2");
 			} else if (v == btnPlay) {
 				stopRecord();
 				startPlay();
