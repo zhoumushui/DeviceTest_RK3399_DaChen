@@ -22,6 +22,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnShowListener;
+import android.content.pm.PackageManager;
 import android.hardware.Camera.CameraInfo;
 import android.os.Handler;
 import android.util.Log;
@@ -59,6 +60,7 @@ public class CameraTest extends BaseTestCase {
 	public boolean onTesting() {
 		if(mDialog!=null){
 			mDialog.show();
+			startAppbyPackage(mContext, "com.android.camera2");
 			return true;
 		}
 		boolean hasCamera =  hasCamera();
@@ -93,19 +95,32 @@ public class CameraTest extends BaseTestCase {
 //				            .setClassName("com.rockchip.devicetest", "com.rockchip.devicetest.CameraTestActivity")
 //				            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
 //					mContext.startActivity(intent); 
+					/*
 					Intent intent = new Intent()
 		            .setClass(mContext, CameraTestActivity.class)
 		            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS );
 					mContext.startActivity(intent); 
+					*/
 				}
 			});
 			mDialog.show();
+			startAppbyPackage(mContext, "com.android.camera2");
 		}else{
 			onTestFail("no camera connect");
 		}
 
 		return true;
 	}
+	
+	private static void startAppbyPackage(Context context, String packageName) {
+		PackageManager packageManager = context.getPackageManager();
+		Intent intent = packageManager.getLaunchIntentForPackage(packageName);
+		if (intent != null) {
+			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			context.startActivity(intent);
+		}
+	}
+
 	private void clearCameraProfile()
 	{
 		Log.d("CameraTest","clearCameraProfile");
