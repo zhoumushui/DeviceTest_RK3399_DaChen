@@ -34,7 +34,8 @@ public class PingUtils {
 	private ResultInfo mResultInfo;
 	private Dialog mPingDialog;
 	private PingTask mPingTask;
-	private static final String PING_CMD_DEFAULT = "ping -c 5 -w 100 -s %1s %2s";
+	//private static final String PING_CMD_DEFAULT = "ping -c 5 -w 100 -s %1s %2s";
+	private static final String PING_CMD_DEFAULT = "ping -c 5 %2s";
 	private String mPingCmd = null;
 
 	private onResultInfoListener mListener;
@@ -46,7 +47,8 @@ public class PingUtils {
 	}
 	public void startPingTest(String server_ip,String package_size)
 	{
-		mPingCmd = String.format(PING_CMD_DEFAULT, package_size,server_ip);
+		//mPingCmd = String.format(PING_CMD_DEFAULT, package_size,server_ip);
+		mPingCmd = String.format(PING_CMD_DEFAULT, server_ip);
 		Log.v(TAG, "startPingTest mPingCmd:"+mPingCmd);
 		View view = LayoutInflater.from(mContext).inflate(R.layout.test_network_ping, null);
 		mStartBtn = (Button) view.findViewById(R.id.start_btn);
