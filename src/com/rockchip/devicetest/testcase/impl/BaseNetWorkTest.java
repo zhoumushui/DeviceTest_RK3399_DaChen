@@ -88,7 +88,7 @@ public class BaseNetWorkTest extends BaseTestCase implements onTestListener{
 		mPingPackageSize = StringUtils.getStringValue( 
 				attachParams.get(ParamConstants.PACKAGE_SIZE), DEFAULT_PACKAGE_SIZE);
 
-		mTestIperf = true;
+		//mTestIperf = true;
 		//如果测试的为wifi网络
 		Log.d("sjf", "NetworkType:"+mNetWorkType+" ,mTestSmb:"+mTestSmb+",mTestIperf:"+mTestIperf+",mTestPing:"+mTestPing);
 		if(mNetWorkType == NETWORK_TYPE_WIFI)
