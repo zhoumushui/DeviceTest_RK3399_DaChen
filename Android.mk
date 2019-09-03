@@ -7,7 +7,7 @@ LOCAL_AAPT_FLAGS += -c mdpi
 
 LOCAL_STATIC_JAVA_LIBRARIES := android-support-v4 libjcifs2 android-tool
 LOCAL_JNI_SHARED_LIBRARIES := libserial_port
-LOCAL_PACKAGE_NAME := DeviceTest7.0
+LOCAL_PACKAGE_NAME := DeviceTest
 LOCAL_CERTIFICATE := platform
 LOCAL_REQUIRED_MODULES := libserial_port
 LOCAL_PROGUARD_ENABLED := disabled
