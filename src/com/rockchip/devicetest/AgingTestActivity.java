@@ -35,6 +35,7 @@ import com.rockchip.devicetest.service.WatchdogService;
 import com.rockchip.devicetest.utils.FileUtils;
 import com.rockchip.devicetest.utils.IniEditor;
 import com.rockchip.devicetest.utils.LogUtil;
+import com.rockchip.devicetest.utils.SettingUtil;
 import com.rockchip.devicetest.utils.SharedPreferencesEdit;
 import com.rockchip.devicetest.utils.SystemInfoUtils;
 import com.rockchip.devicetest.utils.SystemUtils;
@@ -69,7 +70,7 @@ public class AgingTestActivity extends BaseActivity implements AgingCallback {
 	private Handler mMainHandler;
 	private int mKeyBackCount;
 	private boolean hasPassedFactory;
-	private boolean useAntutu3DTest= true;
+	private boolean useAntutu3DTest= false; //true;
 	private Toast mBackToast;
 	private Button resetDevice;
 	private TextView tv;
@@ -351,6 +352,8 @@ public class AgingTestActivity extends BaseActivity implements AgingCallback {
 	protected void onResume() {
 		super.onResume();
 		LogUtil.d(this, "onResume");
+		isShow = true;
+		new Thread(new FlashAgeLedThread()).start();
 	}
 
 	@Override
@@ -360,6 +363,7 @@ public class AgingTestActivity extends BaseActivity implements AgingCallback {
 	}
 
 	protected void onStop() {
+		isShow = false;
 		super.onStop();
 		LogUtil.d(this, "onStop");
 		if(!useAntutu3DTest)
@@ -389,6 +393,33 @@ public class AgingTestActivity extends BaseActivity implements AgingCallback {
 			return;
 		}
 		mAgingDelegate.onDestroy();
+
+		SettingUtil.setAgeLed(true);
+	}
+	
+	private boolean isShow = true;
+	private static final int LED_FLASH_SPAN = 1000;
+	private class FlashAgeLedThread extends Thread {
+
+		@Override
+		public void run() {
+			super.run();
+			while (isShow) {
+				SettingUtil.setAgeLed(false);
+				try {
+					Thread.sleep(LED_FLASH_SPAN);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				SettingUtil.setAgeLed(true);
+				try {
+					Thread.sleep(LED_FLASH_SPAN);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+			SettingUtil.setAgeLed(true);
+		}
 	}
 
 	int mRamSize = 0;//check ram size ,为0时不check ram
