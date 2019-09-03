@@ -44,6 +44,7 @@ public class AudioChannelTest extends BaseTestCase {
 
 	public AudioChannelTest(Context context, Handler handler, TestCaseInfo testcase) {
 		super(context, handler, testcase);
+		android.os.SystemProperties.set("media.audio.device_policy", "speaker");
 		mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
 	}
 
@@ -72,12 +73,14 @@ public class AudioChannelTest extends BaseTestCase {
 		builder.setPositiveButton(mContext.getString(R.string.pub_success), new OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				onTestSuccess();
+				android.os.SystemProperties.set("media.audio.device_policy", "hdmi1");
 			}
 		});
 		builder.setNegativeButton(mContext.getString(R.string.pub_fail), new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				onTestFail(0);
+				android.os.SystemProperties.set("media.audio.device_policy", "hdmi1");
 			}
 		});
 		builder.setCancelable(false);
