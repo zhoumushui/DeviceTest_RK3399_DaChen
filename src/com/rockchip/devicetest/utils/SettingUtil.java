@@ -11,6 +11,8 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
+import android.util.Log;
+
 public class SettingUtil {
 
 	/**
@@ -36,15 +38,12 @@ public class SettingUtil {
 			break;
 		}
 	}
-	
+
 	/**
-	 * 0-关
-	 * 1-开
-	 * 3-进入风扇测试模式， 风扇全速转
-	 * 4-退出风扇测试模式， 风扇根据风扇开关状态运行
+	 * 0-关 1-开 3-进入风扇测试模式， 风扇全速转 4-退出风扇测试模式， 风扇根据风扇开关状态运行
 	 */
 	public static final File fileFan = new File("/proc/fan_status");
-	
+
 	public static void setFanMode(int mode) {
 		switch (mode) {
 		case 0:
@@ -63,9 +62,9 @@ public class SettingUtil {
 			break;
 		}
 	}
-	
 
 	public static void SaveFileToNode(File file, String value) {
+		Log.i("DT", "SaveFileToNode " + file.getPath() + " = " + value);
 		if (file.exists()) {
 			try {
 				StringBuffer strbuf = new StringBuffer("");
@@ -110,5 +109,15 @@ public class SettingUtil {
 		}
 		return 0;
 	}
+	
+	// 老化测试时闪烁指示灯
+	private static final String AGING_LED_NODE = "/sys/devices/virtual/tzgpio_class/tzgpio/tzgpio-ctrl";
+	private static final String AGING_LED_ON = "gpio0=0";
+	private static final String AGING_LED_OFF = "gpio0=1";
+	public static void setAgeLed(boolean enable) {
+		android.util.Log.i("DT","setAgeLed:" + enable);
+		SaveFileToNode(new File(AGING_LED_NODE), enable?AGING_LED_ON:AGING_LED_OFF);
+	}
+	
 
 }
