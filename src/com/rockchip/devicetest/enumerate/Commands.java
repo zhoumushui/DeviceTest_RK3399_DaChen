@@ -29,6 +29,7 @@ public enum Commands {
 	CMD_REST(TypeConstants.CMD_REST, R.string.cmd_rest),
 	CMD_USB(TypeConstants.CMD_USB, R.string.cmd_usb),
 	CMD_MIC(TypeConstants.CMD_MIC, R.string.cmd_mic),
+	CMD_SSD(TypeConstants.CMD_SSD, R.string.cmd_ssd),
 	
 	CMD_BLUETOOTH(TypeConstants.CMD_BLUETOOTH,R.string.cmd_bluetooth),
 	CMD_HDMI_IN(TypeConstants.CMD_HDMI_IN,R.string.cmd_hdmi_in),
@@ -43,6 +44,7 @@ public enum Commands {
 	CMD_MEMORY(TypeConstants.CMD_MEMORY, R.string.cmd_memory),
 	CMD_RECORD(TypeConstants.CMD_RECORD, R.string.cmd_record),
 	CMD_CAMERA(TypeConstants.CMD_CAMERA, R.string.cmd_camera),
+	CMD_UVC(TypeConstants.CMD_UVC, R.string.cmd_uvc),
 	CMD_SMB(TypeConstants.CMD_SMB, R.string.cmd_smb),
 	CMD_LINE_IN(TypeConstants.CMD_LINE_IN, R.string.cmd_line_in),
 	CMD_SERIAL_PORT(TypeConstants.CMD_SERIAL_PORT,R.string.cmd_serial_port),

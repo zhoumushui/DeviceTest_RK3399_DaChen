@@ -19,17 +19,19 @@
     <string name="cmd_usb">USB</string>
     <string name="cmd_cksn">验号</string>
     <string name="cmd_mic">麦克风</string>
+    <string name="cmd_ssd">SSD</string>
     <string name="cmd_bluetooth">蓝牙</string>
     <string name="cmd_hdmi_in">HDMI_IN</string>
     <string name="cmd_pppoe">PPPoE</string>
     <string name="cmd_spdif">SPDIF</string>
     <string name="cmd_usb_label">USB_</string>
     <string name="cmd_memory">内存和Flash</string>
-    <string name="cmd_record">录音</string>
+    <string name="cmd_record">MIC录音</string>
     <string name="cmd_camera">照相</string>
+    <string name="cmd_uvc">UVC</string>
     <string name="cmd_smb">SMB</string>
     <string name="cmd_wifi_smb">WIFISMB</string>
-    <string name="cmd_line_in">LINE IN</string>
+    <string name="cmd_line_in">LINE-IN录音</string>
     <string name="cmd_serial_port">Serial Port</string>
     <string name="cmd_hdmi_edid">HDMI EDID</string>
     <string name="cmd_time">TIME</string>
@@ -254,9 +256,12 @@
     <string name="wifi_iperf_test">WIFI</string>
 
     <!-- RECORD -->
-    <string name="record">录音测试</string>
+    <string name="record">录音测试（MIC）</string>
     <string name="record_record">录音</string>
     <string name="record_play">播放</string>
+    
+    <!-- LINE-IN REC -->
+    <string name="rec_linein_title">录音测试（LINE-IN）</string>
 
     <!-- CAMERA -->
     <string name="camera_title">照相测试</string>
@@ -266,8 +271,12 @@
     <string name="camera_exit">退出</string>
     <string name="camera_go_gallery">跳转到图库</string>
     
+    <!-- Dual HDMI IN -->
+    <string name="dual_hdmi_in_title">双HDMI IN测试</string>
+    <string name="dual_hdmi_in_msg">两路HDMI IN显示是否正常？</string>
+    
      <!-- LINE IN -->
-    <string name="line_in_title">LINE IN</string>
+    <string name="line_in_title">LINE IN录音</string>
     <string name="line_in_msg">请插入LINE IN 设备，看是否有声音输出？</string>
   
     <!--TIME 时间测试 -->

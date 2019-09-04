@@ -30,6 +30,7 @@ public class TypeConstants {
 	public static final String CMD_BEAT = "BEAT";// 心跳包
 	public static final String CMD_CKSN = "CKSN";// 验号?
 	public static final String CMD_MIC = "MIC"; // 麦克风
+	public static final String CMD_SSD = "SSD"; // SSD
 
 	public static final String CMD_SPDIF = "SPDIF";
 	public static final String CMD_BLUETOOTH = "BLUETOOTH";
@@ -38,8 +39,10 @@ public class TypeConstants {
 	public static final String CMD_VGA = "VGA";
 	public static final String CMD_IPERF = "Iperf";
 	public static final String CMD_MEMORY = "MEMORY";
-	public static final String CMD_RECORD = "RECORD";
+	public static final String CMD_RECORD = "RECORD"; // 录音MIC
+	
 	public static final String CMD_CAMERA = "CAMERA";
+	public static final String CMD_UVC = "UVC";
 	public static final String CMD_SMB = "SMB";
 	public static final String CMD_LINE_IN = "LINE_IN";
 	public static final String CMD_SERIAL_PORT = "SERIAL_PORT";
