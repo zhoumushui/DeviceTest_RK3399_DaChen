@@ -41,6 +41,8 @@ public class TestApplication extends Application {
 		System.setProperty("jcifs.smb.client.soTimeout", "10000");
 		System.setProperty("jcifs.smb.client.responseTimeout", "10000");
 		mActivityManager= (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+		
+		android.os.SystemProperties.set("tchip.init.nvme", "0");
 		super.onCreate();
 	}
 

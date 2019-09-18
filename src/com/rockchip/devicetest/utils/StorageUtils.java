@@ -36,12 +36,12 @@ public class StorageUtils {
                 Log.d(TAG, "Volume path:" + vol.getPath());
                 DiskInfo disk = vol.getDisk();
                 if (disk != null) {
-                	Log.d(TAG, "disk.isPcie():" + disk.isPcie());
-                    if (disk.isPcie()) {
+                	//Log.d(TAG, "disk.isPcie():" + disk.isPcie());
+                    /*if (disk.isPcie()) {
                         mUsbDirs = vol.path;
                         Log.d(TAG, "vol.path:" + vol.path);
                         return vol.path;
-                    }
+                    }*/
                 }
             }
         }
@@ -74,9 +74,9 @@ public class StorageUtils {
             if (vol.getType() == VolumeInfo.TYPE_PUBLIC) {
                 DiskInfo disk = vol.getDisk();
                 if (disk != null) {
-                    if (disk.isPcie()) {
+                 /*   if (disk.isPcie()) {
                     	ssdPaths.add(vol.path);
-                    }
+                    }*/
                 }
             }
         }

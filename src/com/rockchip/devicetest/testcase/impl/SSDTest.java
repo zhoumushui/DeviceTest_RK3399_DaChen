@@ -94,7 +94,7 @@ public class SSDTest extends BaseTestCase {
 				attachParams.get(ParamConstants.PCIE_UUID), "1234567890");
 		parseUuisList();
 		// mPciePath = ConfigFinder.getAlivePciePath(mContext,pcie_uuid_list);
-		mPciePath = StorageUtils.getSSDDir(mStorageManager);
+		mPciePath = "/mnt/media_rw/ssd_inode";//StorageUtils.getSSDDir(mStorageManager);
 		LogUtil.d(SSDTest.this, "readSpeed:" + readSpeed + " ,writeSpeed:"
 				+ writeSpeed + ",pcie_uuid:" + pcie_uuids);
 		if (mPciePath == null) {
